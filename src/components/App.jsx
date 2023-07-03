@@ -1,4 +1,6 @@
 import { AppBar } from "./AppBar/AppBar";
+import { Layout } from "./Layout/Layout";
+import { TaskForm } from "./TaskForm/TaskForm";
 
 export const App = () => {
   return (
@@ -12,7 +14,11 @@ export const App = () => {
         color: '#010101'
       }}
     >
+      <Layout>
       <AppBar/>
+      <TaskForm/>
+      </Layout>
+      
     
     </div>
   );
