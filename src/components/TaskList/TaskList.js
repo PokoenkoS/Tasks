@@ -1,10 +1,11 @@
-import { Task } from "components/Task/Task"
+import { Task } from "components/Task/Task";
+import css from "./TaskList.module.css";
 
 export const TaskList =()=> {
 return(
-    <ul>
+    <ul className={css.list}>
         {[].map(task=>(
-            <li key={task.id}>
+            <li className={css.listlistItem} key={task.id}>
                 <Task task={task}/>
             </li>
         ))

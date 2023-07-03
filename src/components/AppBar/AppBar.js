@@ -1,5 +1,6 @@
 import { TaskCounter } from "components/TaskCounter/TaskCounter"
 import css from "./AppBar.module.css"
+import { StatusFilter } from "components/StatusFilter/StatusFilter"
 
 export const AppBar = ()=>{
     return (
@@ -7,7 +8,11 @@ export const AppBar = ()=>{
             <section className={css.section}>
                 <h2 className={css.title}>Tasks</h2>
                 <TaskCounter/>
-            </section>
+                </section>
+                <section className={css.section}>
+                <h2 className={css.title}>Filter by status</h2>
+                <StatusFilter/>
+             </section>
         </header>
     )
 
