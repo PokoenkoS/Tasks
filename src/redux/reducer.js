@@ -30,9 +30,9 @@ const filterInitialState = {
     status: statusFilters.all,
 }
 
-export const filterReducer = (state=filterInitialState, action) =>{
+export const filtersReducer = (state=filterInitialState, action) =>{
   switch(action.type) {
-    case "filter/setStatusFilter":
+    case "filters/setStatusFilter":
         return {
             ...state,
             status: action.payload,

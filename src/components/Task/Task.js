@@ -16,7 +16,7 @@ return(
         className={css.checkbox}
         type="checkbox"
         checked={task.completed}
-        onClick={handleToggle}
+        onChange={handleToggle}
         />
         <p className={css.text}>{task.text}</p>
         <button className={css.btn} onClick={handleDelete}> close</button>

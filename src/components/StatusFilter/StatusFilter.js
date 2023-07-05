@@ -9,14 +9,17 @@ export const StatusFilter =()=> {
     const dispatch = useDispatch();
     const filter = useSelector(getStatusFilter);
 
-    const handleFilterChange = ()=>{
+    const handleFilterChange = (filter)=>{
+        console.log("hello");
         dispatch(setStatusFilter(filter))
+        console.log(filter);
     }
     return(
         <div className={css.wrapper}>
             <Button
+            selected={filter ===statusFilters.all} 
+            
              onClick={()=>handleFilterChange(statusFilters.all)}
-             selected={filter ===statusFilters.all} 
              
              >All</Button>
             <Button
@@ -24,7 +27,8 @@ export const StatusFilter =()=> {
             selected={filter ===statusFilters.active}>Active</Button>
             <Button
             onClick={()=>handleFilterChange(statusFilters.completed)}
-            selected={filter ===statusFilters.active}>Completed</Button>
+         
+            selected={filter ===statusFilters.completed}>Completed</Button>
         </div>
     )
 }
